@@ -5,7 +5,14 @@ var startAlignment = Alignment.topLeft;
 var endAlignment = Alignment.bottomCenter;
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer({
+    super.key,
+    required this.startColor,
+    required this.endColor,
+  });
+
+  final Color startColor;
+  final Color endColor;
 
   @override
   Widget build(context) {
@@ -15,13 +22,16 @@ class GradientContainer extends StatelessWidget {
           begin: startAlignment,
           end: endAlignment,
           colors: [
-            Color.fromARGB(255, 26, 2, 80),
-            Color.fromARGB(255, 45, 7, 98)
+            startColor,
+            endColor,
           ],
         ),
       ),
       child: Center(
-        child: StyledText('Hello Peace!'),
+        child: Image.asset(
+          'assets/img/dice-2.png',
+          width: 200,
+        ),
       ),
     );
   }
