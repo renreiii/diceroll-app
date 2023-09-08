@@ -5,8 +5,15 @@ import 'package:flutter/material.dart';
 import 'package:diceroll/gradient_container.dart';
 
 void main() {
-  runApp(
-    const MaterialApp(
+  runApp(const DiceRollApp());
+}
+
+class DiceRollApp extends StatelessWidget {
+  const DiceRollApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.deepPurple,
         body: GradientContainer(
@@ -14,9 +21,6 @@ void main() {
           endColor: Color.fromARGB(255, 45, 7, 98),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
-
-// 255, 26, 2, 80),
-            // Color.fromARGB(255, 45, 7, 98)
