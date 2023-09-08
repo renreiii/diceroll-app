@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // local packages import files
 import 'package:diceroll/gradient_container.dart';
-import 'package:diceroll/styled_text.dart';
 
 void main() {
   runApp(
